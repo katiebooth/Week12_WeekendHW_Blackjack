@@ -39,25 +39,6 @@ public class Game {
             dealer.getCards().add(unshuffledDeck.get(3));
     }
 
-    //calculate scores
-//        public int calculatePlayerScoreUnshuffledDeckForTesting(){
-//            ArrayList unshuffledDeck = deck.constructDeck();
-//            System.out.println(deck.getDeck());
-////            Collections.shuffle(unshuffledDeck);
-//            System.out.println(deck.getDeck());
-//            player.getCards().add(unshuffledDeck.get(0));
-//            player.getCards().add(unshuffledDeck.get(1));
-//            System.out.println(player.getCards());
-//            return player.calculateScore();
-//        }
-//
-//    public int calculateDealerScoreUnshuffledDeckForTesting(){
-//        ArrayList unshuffledDeck = deck.constructDeck();
-////            Collections.shuffle(unshuffledDeck);
-//        dealer.getCards().add(unshuffledDeck.get(2));
-//        dealer.getCards().add(unshuffledDeck.get(3));
-//        return dealer.calculateScore();
-//    }
 
     public void calculateWinner(){
         ArrayList unshuffledDeck = deck.constructDeck();
@@ -81,5 +62,28 @@ public class Game {
         }
     }
     }
+
+
+    //for TDD incremental approach
+
+//calculate scores
+//        public int calculatePlayerScoreUnshuffledDeckForTesting(){
+//            ArrayList unshuffledDeck = deck.constructDeck();
+//            System.out.println(deck.getDeck());
+////            Collections.shuffle(unshuffledDeck);
+//            System.out.println(deck.getDeck());
+//            player.getCards().add(unshuffledDeck.get(0));
+//            player.getCards().add(unshuffledDeck.get(1));
+//            System.out.println(player.getCards());
+//            return player.calculateScore();
+//        }
+//
+//    public int calculateDealerScoreUnshuffledDeckForTesting(){
+//        ArrayList unshuffledDeck = deck.constructDeck();
+////            Collections.shuffle(unshuffledDeck);
+//        dealer.getCards().add(unshuffledDeck.get(2));
+//        dealer.getCards().add(unshuffledDeck.get(3));
+//        return dealer.calculateScore();
+//    }
 
 
