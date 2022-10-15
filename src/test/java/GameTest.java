@@ -39,7 +39,7 @@ public class GameTest {
     @Test
     public void gameHasOutcome(){
         game.calculateWinner();
-        //can't test anything as function has void output
+        //can't test the outcome as function has void output so use dummy test data
         assertEquals("Player has beaten dealer!", "Player has beaten dealer!");
     }
 

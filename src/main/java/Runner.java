@@ -11,6 +11,6 @@ public class Runner {
         game = new Game(player, dealer, deck);
 
         game.calculateWinner();
-        
+
     }
 }

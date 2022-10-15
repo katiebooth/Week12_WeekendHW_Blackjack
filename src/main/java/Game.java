@@ -70,8 +70,11 @@ public class Game {
         int dealerScore = dealer.calculateScore();
         player.printHand();
         dealer.printHand();
-        if(playerScore >= dealerScore){
+        if(playerScore > dealerScore){
             System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". Player has beaten dealer!");
+        }
+        else if(playerScore == dealerScore){
+            System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". It's a tie!");
         }
         else {
             System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". Dealer has beaten player!");
