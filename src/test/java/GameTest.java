@@ -23,5 +23,39 @@ public class GameTest {
         game.shuffleDeck();
         assertEquals(52, deck.getDeck().size());
     }
+
+    @Test
+    public void playerHasTwoCardsDealt(){
+        game.dealCardsToPlayer();
+        assertEquals(2, player.getCards().size());
+    }
+
+    @Test
+    public void dealerHasTwoCardsDealt(){
+        game.dealCardsToDealer();
+        assertEquals(2, dealer.getCards().size());
+    }
+
+    @Test
+    public void gameHasOutcome(){
+        game.calculateWinner();
+        //can't test anything as function has void output
+        assertEquals("Player has beaten dealer!", "Player has beaten dealer!");
+    }
+
+//    @Test
+//    public void playerHasScore(){
+//        assertEquals(2, game.calculatePlayerScoreUnshuffledDeckForTesting());
+//    }
+//
+//    @Test
+//    public void dealerHasScore(){
+//        assertEquals(2, game.calculateDealerScoreUnshuffledDeckForTesting());
+//    }
+
+
+
 }
+
+
 

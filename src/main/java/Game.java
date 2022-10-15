@@ -9,6 +9,8 @@ public class Game {
     Dealer dealer;
     Deck deck;
 
+    Card card;
+
     public Game(Player player, Dealer dealer, Deck deck) {
         this.player = player;
         this.dealer = dealer;
@@ -20,20 +22,61 @@ public class Game {
             Collections.shuffle(unshuffledDeck);
         }
 
-        //give 2 cards to player
-//        public void dealCardPlayer(Player player, Card card){
-//            player.cards.add(deck(0));
-//            player.cards.add(deck(1));
+        //deal 2 cards to player
+        public void dealCardsToPlayer(){
+            ArrayList unshuffledDeck = deck.constructDeck();
+            Collections.shuffle(unshuffledDeck);
+            player.getCards().add(unshuffledDeck.get(0));
+            player.getCards().add(unshuffledDeck.get(1));
+        }
+
+        //deal 2 cards to dealer
+
+        public void dealCardsToDealer(){
+            ArrayList unshuffledDeck = deck.constructDeck();
+            Collections.shuffle(unshuffledDeck);
+            dealer.getCards().add(unshuffledDeck.get(2));
+            dealer.getCards().add(unshuffledDeck.get(3));
+    }
+
+    //calculate scores
+//        public int calculatePlayerScoreUnshuffledDeckForTesting(){
+//            ArrayList unshuffledDeck = deck.constructDeck();
+//            System.out.println(deck.getDeck());
+////            Collections.shuffle(unshuffledDeck);
+//            System.out.println(deck.getDeck());
+//            player.getCards().add(unshuffledDeck.get(0));
+//            player.getCards().add(unshuffledDeck.get(1));
+//            System.out.println(player.getCards());
+//            return player.calculateScore();
 //        }
-
-        //give 2 cards to dealer
-
-//        public void dealCardDealer(Dealer dealer, Card card){
-//            dealer.cards.add(deck());
+//
+//    public int calculateDealerScoreUnshuffledDeckForTesting(){
+//        ArrayList unshuffledDeck = deck.constructDeck();
+////            Collections.shuffle(unshuffledDeck);
+//        dealer.getCards().add(unshuffledDeck.get(2));
+//        dealer.getCards().add(unshuffledDeck.get(3));
+//        return dealer.calculateScore();
 //    }
 
-    //calculate player score
-    //calculate dealer score
-    //compare and declare the winner
+    public void calculateWinner(){
+        ArrayList unshuffledDeck = deck.constructDeck();
+        Collections.shuffle(unshuffledDeck);
+        player.getCards().add(unshuffledDeck.get(0));
+        player.getCards().add(unshuffledDeck.get(1));
+        int playerScore = player.calculateScore();
+        dealer.getCards().add(unshuffledDeck.get(2));
+        dealer.getCards().add(unshuffledDeck.get(3));
+        int dealerScore = dealer.calculateScore();
+        player.printHand();
+        dealer.printHand();
+        if(playerScore >= dealerScore){
+            System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". Player has beaten dealer!");
+        }
+        else {
+            System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". Dealer has beaten player!");
+        }
     }
+    }
+
 

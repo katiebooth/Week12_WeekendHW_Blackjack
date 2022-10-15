@@ -8,7 +8,7 @@ public class Card {
     }
 
     public int getCardValue() {
-        return cardValue.getCardValue();
+        return cardValue.getCardValueFromEnum();
     }
 
     public String getCardSuit() {

@@ -19,7 +19,10 @@ public enum CardValue {
         this.value = value;
     }
 
-    public int getCardValue() {
+    public int getCardValueFromEnum() {
         return value;
     }
+
+
 }
+
