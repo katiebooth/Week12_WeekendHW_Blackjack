@@ -35,7 +35,7 @@ public abstract class Person {
 
     public void printHand(){
         for (Card card : this.cards){
-            System.out.println(this.type + " has "+ card.getCardValue() + " of " + card.getCardSuit()+"s");
+            System.out.println(this.type+" ("+this.name+")" + " has "+ card.getCardName() + " of " + card.getCardSuit()+"s");
         }
     }
 

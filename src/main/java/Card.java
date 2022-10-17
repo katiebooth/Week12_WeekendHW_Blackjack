@@ -11,6 +11,10 @@ public class Card {
         return cardValue.getCardValueFromEnum();
     }
 
+    public String getCardName() {
+        return cardValue.getCardNameFromEnum();
+    }
+
     public String getCardSuit() {
         return cardSuit.getSuit();
     }

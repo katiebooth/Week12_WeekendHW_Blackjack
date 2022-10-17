@@ -52,13 +52,13 @@ public class Game {
         player.printHand();
         dealer.printHand();
         if(playerScore > dealerScore){
-            System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". Player has beaten dealer!");
+            System.out.println(player.getName()+" has "+playerScore+". "+dealer.getName()+" has " + dealerScore+". "+player.getName()+ " has beaten "+dealer.getName()+"!");
         }
         else if(playerScore == dealerScore){
-            System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". It's a tie!");
+            System.out.println(player.getName()+" has "+playerScore+". "+dealer.getName()+" has " + dealerScore+". It's a tie!");
         }
         else {
-            System.out.println("Player has "+playerScore+". Dealer has " + dealerScore+". Dealer has beaten player!");
+            System.out.println(player.getName()+" has "+playerScore+". "+dealer.getName()+" has " + dealerScore+". "+dealer.getName()+ " has beaten "+player.getName()+"!");
         }
     }
     }
